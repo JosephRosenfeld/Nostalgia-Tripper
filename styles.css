@@ -1,0 +1,575 @@
+body {
+  font-family: MaisonNeue, Geneva, Tahoma, sans-serif;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  display: flex;
+  padding: 15px 30px;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f9f9f9;
+  border-bottom: 1px solid #d4d4d4;
+  box-shadow: 0px 4px 16px 0px rgba(0,0,0,0.2);
+  z-index: 2;
+}
+
+.header-logo {
+  width: 4rem;
+}
+
+.header-navigation {
+  align-self: stretch;
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+  align-items: center;
+  font-size: 1rem;
+}
+
+.other-products img {
+  width: .6rem;
+}
+
+.dropbtn {
+  padding: 12px 16px 12px 12px;
+}
+
+.products-list {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  box-shadow: 0px 8px 8px 0px rgba(0, 0, 0, 0.11);
+  z-index: 3;
+}
+
+.products-list a {
+  color: black;
+  padding: 12px 16px 12px 12px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.products-list a:hover {
+  background-color: #ddd;
+}
+
+.other-products:hover .products-list {
+  display: block;
+}
+
+.member-button a{
+  color: black;
+  text-decoration: none;
+}
+
+.login img {
+  width: 2rem;
+  cursor: pointer;
+}
+
+/*generic styles for html els*/
+
+section {
+  border-bottom: 1px solid #eeeeee;
+}
+
+button {
+  height: 45px;
+  padding: 10px;
+  background-color: #60b0f4;
+  border: 1px solid #60b0f4;
+  border-radius: 8px;
+  color: white; 
+  font-weight: bold;
+  float: right;
+  cursor: pointer;
+  font-size: 3rem;
+}
+
+p {
+  color: rgba(0, 0, 0, 0.7);
+  font-size: 1.2rem;
+}
+
+button:hover {
+  background-color: #60aff4c4;
+}
+
+/*Styling sign up section*/
+
+.grid-sign-up {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas: "sign-up-area boombox-img";
+  gap: 40px;
+  padding: 100px 80px;
+  align-items: center;
+  background-color: #f9f9f9;
+}
+
+.sign-up-area {
+  grid-area: sign-up-area;
+  justify-self: stretch;
+}
+
+.boombox-img {
+  grid-area: boombox-img;
+  justify-self: center;
+  width: 90%;
+  max-width: 630px;
+}
+
+.title {
+  font-size: 3.5rem;
+  margin: 0px;
+}
+
+#titleTwo {
+  color: #60b0f4;
+}
+
+.sub-title {
+  font-size: 1.5rem;
+  color:rgba(0, 0, 0, 0.7);
+}
+
+.email-form {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  margin-top: 60px;
+  height: 45px;
+  gap: 5px;
+  flex-grow: 1;
+}
+
+.email-form input {
+  width: 40%;
+  background-color: #ffffff;
+  border: 1px solid grey;
+  border-radius: 8px;
+  text-indent: 15px;
+  outline: none;
+}
+
+.email-form input:hover, .email-form input:focus {
+  border-color: #60b0f4;
+}
+
+.email-form button {
+  width: 20%;
+}
+
+/*styling definition section*/
+
+.grid-definition {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-areas: "img img img text text text text";
+  padding: 100px 80px;
+  gap: 40px;
+
+}
+
+.grid-definition img {
+  grid-area: img;
+  justify-self: center;
+  align-self: center;
+  width: 100%;
+  max-width: 600px;
+}
+
+.definition-container {
+  grid-area: text;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.definition-container h2 {
+  font-size: 3rem;
+  margin: 0px;
+}
+
+.definition-container h3 {
+  margin: 0px;
+  color: #60b0f4;
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin-top: 5px;
+}
+
+.definition-container p {
+  margin-top: 30px;
+  margin-bottom: 50px;
+}
+
+/*styling benefits section*/
+
+.grid-benefits {
+  display: grid;
+  grid-template-areas: "header header header" "benefit1 benefit2 benefit3";
+  grid-template-columns: repeat(3, 1fr);
+  gap: 80px;
+  padding: 100px 80px;
+  justify-items: center;
+  align-items: stretch;
+  background-color:#f9f9f9;
+}
+
+.grid-benefits h2 {
+  grid-area: header;
+  font-size: 3rem;
+  margin-top: 0px;
+}
+
+.benefit1 {
+  grid-area: benefit1;
+}
+
+.benefit2 {
+  grid-area: benefit2;
+}
+
+.benefit3 {
+  grid-area: benefit3;
+}
+
+.benefit {
+  padding: 20px;
+  background-color: white;
+  border: 1px solid grey;
+  border-radius: 8px;
+  max-width: 610px;
+  box-shadow: 2px 4px 25px rgba(0, 0, 0, .1);
+  text-align: center;
+  transition: all .2s linear;
+}
+
+.benefit:hover {
+  box-shadow: 2px 8px 45px rgba(0, 0, 0, .15);
+  transform: translate3D(0, -2px, 0);
+  border: 1px solid #60b0f4;
+}
+
+.benefit-logo {
+  height: 80px;
+  margin-right: -30%;
+  margin-left: -30%;
+  padding: 0 30% 20px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid grey;  
+}
+
+.benefit-title {
+  margin: 0px;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.benefit-text {
+  font-size: 1.2rem;
+}
+
+footer {
+  display: grid;
+  grid-template-areas: ". brand prods legal ." ". copyright copyright copyright .";
+  background-color: #efefef;
+  gap: 60px;
+  padding: 100px 300px 50px;  
+}
+
+.brand-info {
+  grid-area: brand;
+  display: flex;
+  flex-direction: column;
+}
+
+.brand {
+  display: flex;
+  align-items: start;
+  gap: 20px;
+}
+
+.brand h3 {
+  margin: 0;
+  font-size: 1.5rem;
+  display: inline-block;
+}
+
+.brand img {
+  display: inline-block;
+  width: 40px;
+}
+
+.brand-info > div:nth-last-of-type(-n+2) {
+  margin-top: 20px;
+  margin-left: 60px;
+}
+
+.products {
+  grid-area: prods;
+  justify-self: start;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.products h4 {
+  margin: 0;
+}
+
+.products a, .legal-info a {
+  color: black;
+  text-decoration: none; 
+}
+
+.legal-info {
+  grid-area: legal;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.legal-info h4 {
+  margin: 0;
+}
+
+.copyright-text {
+  grid-area: copyright;
+  justify-self: center;
+  text-align: center;
+}
+
+/*Making the site responsive to different screen sizes*/
+
+@media (min-width: 1500px) {
+  /*scaling header for bigger screen sizes to increase size*/
+  .header-logo {
+    width: 5rem;
+  }
+  
+  .header-title {
+    font-size: 2.5rem;
+  }
+  
+  .header-navigation {
+    gap: 12px;
+    font-size: 1.2rem;
+  }
+
+  .other-products img {
+    width: .8rem;
+  }
+
+  .login img {
+    width: 2.3rem;
+  }
+
+  /*Scaling the grid-sign-up section*/
+  .sign-up-area {
+    justify-self: center;
+  }
+  
+  .email-form {
+    width: 700px;
+  }
+}
+
+@media (max-width: 1500px) {
+  h2 {
+    font-size: 2.5rem !important;
+  }
+
+  footer {
+    padding: 100px 150px 50px;
+  }
+}
+
+
+@media (max-width: 1250px) {
+  .title {
+    font-size: 3rem;
+  }
+
+  h2 {
+    font-size: 2.3rem !important;
+  }
+}
+
+@media (max-width: 1150px) {
+
+  .header-title {
+    display: none;
+  }
+
+  section {
+    padding: 80px 200px !important;
+  }
+
+  .grid-sign-up {
+    grid-template-columns: 1fr;
+    grid-template-areas: "sign-up-area";
+    gap: 0px;
+  }
+  
+  .sign-up-area {
+    grid-area: sign-up-area;
+    justify-self: stretch;
+    text-align: center;
+  }
+
+  input {
+    box-sizing: border-box;
+  }
+  
+  .email-form {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-items: stretch;
+    height: 150px;
+    gap: 8px;
+    flex-grow: 1;
+  }
+  
+  .email-form input, .email-form button {
+    width: 100%;
+    flex-grow: 1;
+    flex-basis: 0;
+  }
+
+  .email-form button {
+    width: 100%;
+    flex-grow: 1;
+    flex-basis: 0;
+    padding: 0px;
+  }
+
+  .boombox-img {
+    width: 100%;
+    display: none;
+  }
+
+  .grid-definition {
+    grid-template-columns: 1fr;
+    grid-template-areas: "definition";
+    gap: 0px;
+    text-align: center;
+  }
+
+  .grid-definition img {
+    display: none;
+  }
+
+  .definition-container p {
+    margin-bottom: 30px;
+  }
+
+  br {
+    display: none;
+  }
+
+  /*making all the benefit cards into one column*/
+  .grid-benefits {
+    grid-template-areas: "header" "benefit1" "benefit2" "benefit3";
+    grid-template-columns: 1fr;
+    gap: 80px;
+    padding: 100px 80px;
+    justify-items: center;
+    align-items: stretch;
+    background-color:#f9f9f9;
+  }
+
+  footer {
+    padding: 100px 0px 50px;
+  }
+}
+
+@media (max-width: 1050px) {
+
+  section {
+    padding: 80px 100px !important;
+  }
+}
+
+@media (max-width: 800px) {
+
+  section {
+    padding: 60px 20px !important;
+  }
+
+  footer {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "brand brand" "prods legal" "copyright copyright"; 
+    column-gap: 30px;
+    row-gap: 50px;
+  }
+
+  .brand-info, .products, .legal-info{
+    justify-self: center;
+  }
+
+  .brand-info {
+    width: 100%;
+    align-items: center;
+  }
+  
+  .brand {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .brand h3 {
+    margin: 0;
+    font-size: 3rem;
+    display: inline-block;
+  }
+  
+  .brand img {
+    display: inline-block;
+    width: 80px;
+  }
+  
+  .brand-info * {
+    margin-left: 0px !important;
+  }
+
+}
+
+@media (min-width: 800px) {  
+  /*Making it so that "Positively Vibes" is centered regardless
+  of width of left or right flex child item*/
+  header > * {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .header-logo {
+    width: 4rem;
+    margin-right: auto;
+  }
+  
+  .header-title {
+    font-size: 2rem;
+    font-weight: bold;
+    align-self: center;
+  }
+  
+  .header-navigation {
+    align-self: stretch;
+    margin-left: auto;
+    display: flex;
+    gap: 12px;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 1rem;
+  }
+}
