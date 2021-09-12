@@ -32,8 +32,9 @@ header {
   width: .6rem;
 }
 
+
 .dropbtn {
-  padding: 12px 16px 12px 12px;
+  padding-right: 16px;
 }
 
 .products-list {
@@ -224,7 +225,8 @@ button:hover {
 .grid-benefits h2 {
   grid-area: header;
   font-size: 3rem;
-  margin-top: 0px;
+  margin: 0px;
+  text-align: center;
 }
 
 .benefit1 {
@@ -350,24 +352,24 @@ footer {
 @media (min-width: 1500px) {
   /*scaling header for bigger screen sizes to increase size*/
   .header-logo {
-    width: 5rem;
+    width: 5rem !important;
   }
   
   .header-title {
-    font-size: 2.5rem;
+    font-size: 2.5rem !important;
   }
   
   .header-navigation {
-    gap: 12px;
-    font-size: 1.2rem;
+    gap: 12px !important;
+    font-size: 1.2rem !important;
   }
 
   .other-products img {
-    width: .8rem;
+    width: .8rem !important;
   }
 
   .login img {
-    width: 2.3rem;
+    width: 2.3rem !important;
   }
 
   /*Scaling the grid-sign-up section*/
@@ -512,6 +514,7 @@ footer {
 
   .brand-info, .products, .legal-info{
     justify-self: center;
+    align-items: center;
   }
 
   .brand-info {
@@ -571,5 +574,28 @@ footer {
     justify-content: flex-end;
     align-items: center;
     font-size: 1rem;
+  }
+}
+
+@media (max-width: 500px) {  
+  .header-navigation {
+    font-size: .8rem;
+    gap: 8px;
+  }
+
+  .header-logo {
+    width: 3rem;
+  }
+  
+  .header-title {
+    font-size: 2.5rem !important;
+  }
+
+  #footer-title{
+    font-size: 1.75rem !important;
+  }
+
+  .brand img {
+    width: 60px;
   }
 }
